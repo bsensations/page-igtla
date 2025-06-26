@@ -1,0 +1,251 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background:#fdfcfb;
+  color: #333;
+  text-align: center;
+}
+.main{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 20px;
+  padding: 30px;
+}
+
+.delay{
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: aparecer 1s ease forwards;
+  animation-delay: 0.5s; /* ⏱ atraso de 2 segundos */
+}
+
+@keyframes aparecer {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+.divisoria {
+  height: 10px;
+  margin: 50px;
+  background: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff);
+  border: none;
+}
+
+section.quem-somos{
+  padding: 30px 30px;
+}
+
+.imagem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(41, 38, 38);
+  color: white;
+  box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.696); /* sombra */
+  background-attachment: fixed; /* parallax */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 700px;
+  font-size: 3em;
+}
+
+.imagem h1{
+  margin-bottom: 10px;
+}
+.imagem h5 {
+  margin-top: 0px; /* elimina espaço acima do h5 */
+}
+
+.logos{
+  display: flex;
+  flex-direction: row;
+}
+
+#logo-igtla{
+  width: 200px;
+  border-radius: 30%;
+}
+
+#logo-bs{
+  width: 200px;
+  background-color: rgba(219, 244, 244, 0.101);
+  border-radius: 30%;
+}
+
+
+
+section#img01 {
+  background-image: url('./images/Imagem1.png');
+}
+
+
+main .quem-somos{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  column-gap: 10px;
+  background-color: rgba(0, 0, 0, 0.334);
+  border-radius: 10px;
+  color: #fff ;
+}
+
+@media (max-width: 768px) {
+  main .quem-somos {
+    flex-direction: column;
+    justify-content: center;
+
+    flex-wrap: wrap;
+  }
+
+  main #p2 {
+    width: 100vw;
+  
+  }
+}
+
+main #p1 {
+  text-align: justify;
+  padding: 80px;
+
+}
+
+
+main #p2{
+  width: 50vw;
+  height: 600px;
+  
+}
+
+
+
+.mainCards{
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 50px;
+}
+
+.card{
+  background-color: #d71111;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 30px;
+  padding: 15px;
+  border-radius: 8px;
+  width: 150px;
+  height: 380px;
+  cursor: pointer;
+  transition: transform 0.3s ease; /* suaviza a transição */
+}
+.card:hover{
+  transform: translateY(-5px); /* move o botão 5px para cima */
+}
+
+.card img{
+  width: 150px;
+  border-radius: 5px;
+}
+
+.card button{
+  margin: 7px;
+  width: 90px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  
+}
+
+#rainbow{
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 0, 0, 0.600), /* Vermelho */
+    rgb(255, 127, 0, 0.600), /* Laranja */
+    rgba(255, 255, 0, 0.600), /* Amarelo */
+    rgba(0, 255, 0, 0.600), /* Verde */
+    rgba(0, 0, 255, 0.600), /* Azul */
+    rgba(76, 0, 130, 0.600) /* Índigo */
+  );
+}
+
+#rainbow p{
+  color:white;
+  font-weight: bold;
+}
+
+.flip-container {
+  width: 150px;
+  height: 380px;
+  perspective: 1000px;
+  margin: 10px;
+}
+
+.flipper {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  position: relative;
+  transition: transform 0.6s;
+}
+
+.flip-container:hover .flipper {
+  transform: rotateY(180deg);
+}
+
+.front{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  border-radius: 8px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+
+.back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  border-radius: 8px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back {
+  transform: rotateY(180deg);
+  flex-direction: column;
+}
+
+.back-button {
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  width: 90px;
+  cursor: pointer;
+  margin-top: auto;
+  margin-bottom: 20px;
+}
+
+.titulo-card{
+  padding: 10px;
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+}
