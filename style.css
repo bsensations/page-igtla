@@ -1,16 +1,15 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  background:#fdfcfb;
+  background:#FAF9F6;
   color: #333;
   text-align: center;
 }
-.main{
+.main {
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  margin: 20px;
   padding: 30px;
+  background-color: #333;
 }
 
 .delay{
@@ -28,8 +27,9 @@ body {
     }
 
 .divisoria {
-  height: 10px;
+  height: 5px;
   background: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff);
+  margin-top: 20px;
   border: none;
 }
 
@@ -77,47 +77,58 @@ section.quem-somos{
 }
 
 
-
 section#img01 {
   background-image: url('./images/Imagem1.png');
 }
 
-
-main .quem-somos{
+/* SEÇÃO QUEM SOMOS - estilo padrão para desktop */
+main .quem-somos {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   column-gap: 10px;
   background-color: rgba(0, 0, 0, 0.334);
   border-radius: 10px;
-  color: #fff ;
+  color: #fff;
+  padding: 30px;
+  flex-wrap: wrap; /* ⬅️ ADICIONE ISSO */
 }
 
+/* Texto justificado */
+main #p1 {
+  text-align: justify;
+  max-width: 600px;
+}
+
+/* Imagem com largura relativa e altura fixa para desktop */
+main #p2 {
+  max-width: 100%;
+  max-height: 600px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+/* MEDIA QUERY para dispositivos menores */
 @media (max-width: 768px) {
   main .quem-somos {
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
 
-    flex-wrap: wrap;
+  main #p1 {
+    width: 100%;
+    text-align: justify;
   }
 
   main #p2 {
-    width: 100vw;
-  
+    width: auto;
+    max-width: 90%;
+    height: auto;
+    object-fit: contain;
+    margin-top: 20px;
   }
-}
-
-main #p1 {
-  text-align: justify;
-  padding: 80px;
-
-}
-
-
-main #p2{
-  width: 50vw;
-  height: 600px;
-  
 }
 
 .mainCards{
@@ -125,6 +136,10 @@ main #p2{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  margin-top: 70px;
+  padding-top: 30px;
+  padding-bottom: 70px;
+  
 }
 
 .card{
@@ -144,6 +159,7 @@ main #p2{
 }
 .card:hover{
   transform: translateY(-5px); /* move o botão 5px para cima */
+  
 }
 
 .card img{
@@ -194,6 +210,7 @@ main #p2{
 
 .flip-container:hover .flipper {
   transform: rotateY(180deg);
+  cursor: pointer;
 }
 
 .front{
