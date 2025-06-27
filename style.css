@@ -261,3 +261,20 @@ main #p2 {
   border-radius: 5px;
   color: rgb(255, 255, 255);
 }
+
+
+.experiencias{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: 80px;
+  column-gap: 10px;
+  background-color: #022850a1;
+  color: black;
+  padding: 15px;
+  flex-wrap: wrap; /* ⬅️ ADICIONE ISSO */
+}
+.experiencias h1{
+  margin-left: 30px;
+  color: whitesmoke;
+}
