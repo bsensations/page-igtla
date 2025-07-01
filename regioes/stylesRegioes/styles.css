@@ -4,40 +4,40 @@ body{
     box-sizing: border-box;
 }
 
-.container{
+.grid-container{
     background-color: #333;
     display: grid;
-    /*gap: 5px;*/
+    gap: 5px;
     color: white;
     grid-template-areas: 
         'header header header'
-        'sidebar content content'
+        'content content content'
         'footer footer footer';
 }
 
-.container div{
-    background-color: palevioletred;
-    padding: 20px;
-}
+
 
 div #header{
     grid-area: header;
-    background-image: url('../images/rsudeste.png');
+    background-image: url('../images/imgs-header/sudeste.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     height: 300px;
 }
 
-#sidebar{
-    grid-area: sidebar;
-    height: 100vh;
-}
-
 #content{
     grid-area: content;
     height: 100vh;
+    margin: 20px;
+}
+
+#content .slides{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #footer{
     grid-area: footer;
+    background-color: rgb(4, 51, 91);
 }
