@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Raleway", sans-serif;
   margin: 0;
   background:#FAF9F6;
   color: #292828;
@@ -280,6 +280,7 @@ main #p2 {
 .secao h1{
   margin-left: 30px;
   color: whitesmoke;
+  font-family: "Raleway", sans-serif;
 }
 
 .secao footer h1{

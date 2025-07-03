@@ -23,15 +23,30 @@ body {
   }
 }
 
-#headerSE {
+.header{
   grid-area: header;
-  background-image: url('../images/imgs-header/SE.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#headerSE {
+  background-image: url('../images/imgs-header/SE.jpg');
+}
+#headerS{
+  background-image: url('../images/imgs-header/S.png');
+}
+#headerN{
+  background-image: url('../images/imgs-header/N.png');
+}
+#headerNE{
+  background-image: url('../images/imgs-header/NE.png');
+}
+#headerCO{
+  background-image: url('../images/imgs-header/CO.png');
 }
 
 #logo {
