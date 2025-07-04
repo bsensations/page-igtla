@@ -51,16 +51,16 @@ body {
 
 #logo {
   width: 100%;
-  max-width: 700px;     /* aumenta para desktops */
+  max-width: 700px;     
   height: auto;
   margin-top: 20px;
 }
 
 @media (max-width: 480px) {
   #logo {
-    width: 90vw;          /* ocupa 90% da largura da tela */
-    max-width: none;      /* sem limite superior */
-    min-width: 280px;     /* aumenta o mínimo pra não ficar pequena */
+    width: 90vw;         
+    max-width: none;      
+    min-width: 280px;     
     margin-top: 10px;
   }
 }
@@ -83,7 +83,6 @@ body {
   flex-direction: column;
 }
 
-/* Aumenta o tamanho da fonte em telas grandes */
 @media (min-width: 1024px) {
   .itens-sidebar {
     font-size: 1.5rem;

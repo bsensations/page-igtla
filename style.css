@@ -1,52 +1,53 @@
 body {
   font-family: "Raleway", sans-serif;
   margin: 0;
-  background:#FAF9F6;
+  background: #FAF9F6;
   color: #292828;
   text-align: center;
 }
-.main {
+
+.main-container {
   display: flex;
   flex-direction: column;
   background-color: #00295448;
   padding-bottom: 30px;
 }
 
-.delay{
+.fade-in {
   opacity: 0;
   transform: translateY(-20px);
-  animation: aparecer 1s ease forwards;
-  animation-delay: 0.5s; 
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 0.5s;
 }
 
-@keyframes aparecer {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-.divisoria {
+.divider {
   height: 5px;
-  background: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff);
+  background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
   margin-top: 20px;
   border: none;
 }
 
-section.quem-somos{
-  padding: 30px 30px;
+.about-section {
+  padding: 30px;
   font-size: 1.2rem;
 }
 
-.imagem {
+.hero-banner {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgb(41, 38, 38);
+  background-color: #292626;
   color: white;
-  box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.696); /* sombra */
-  background-attachment: fixed; /* parallax */
+  box-shadow: inset 6px 6px 13px rgba(0, 0, 0, 0.7);
+  background-attachment: fixed;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -54,54 +55,53 @@ section.quem-somos{
   font-size: 3em;
 }
 
-.imagem h1{
+.hero-banner h1 {
   margin-bottom: 10px;
 }
-.imagem h5 {
-  margin-top: 0px; /* elimina espaço acima do h5 */
+
+.hero-banner h5 {
+  margin-top: 0;
 }
 
-.logos{
+.logo-container {
   display: flex;
   flex-direction: row;
 }
 
-#logo-igtla{
+#logo-iglta {
   width: 200px;
   border-radius: 30%;
 }
 
-#logo-bs{
+#logo-brazil {
   width: 200px;
-  background-color: rgba(219, 244, 244, 0.101);
+  background-color: rgba(219, 244, 244, 0.1);
   border-radius: 30%;
 }
 
-
-section#img01 {
+#banner-image {
   background-image: url('./images/image1.png');
 }
 
-/* SEÇÃO QUEM SOMOS - estilo padrão para desktop */
-main .quem-somos {
+.about-section {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   column-gap: 10px;
-  background-color: #FFFFFF;
-  color: black;
+  background-color: #fff;
+  color: #084B71;
   padding: 30px;
-  flex-wrap: wrap; /* ⬅️ ADICIONE ISSO */
+  font-weight: bold;
+  flex-wrap: wrap;
 }
 
-/* Texto justificado */
-main #p1 {
+#text-content {
   text-align: justify;
   max-width: 600px;
+  line-height: 2.1rem;
 }
 
-/* Imagem com largura relativa e altura fixa para desktop */
-main #p2 {
+#image-map {
   max-width: 100%;
   max-height: 600px;
   height: auto;
@@ -109,29 +109,25 @@ main #p2 {
   border-radius: 10px;
 }
 
-/* MEDIA QUERY para dispositivos menores */
 @media (max-width: 768px) {
-  main .quem-somos {
+  .about-section {
     flex-direction: column;
     align-items: center;
     padding: 20px;
   }
 
-  main #p1 {
+  #text-content {
     width: 100%;
-    text-align: justify;
   }
 
-  main #p2 {
+  #image-map {
     width: auto;
     max-width: 90%;
-    height: auto;
-    object-fit: contain;
     margin-top: 20px;
   }
 }
 
-.mainCards{
+.card-section {
   padding: 10px;
   display: flex;
   flex-wrap: wrap;
@@ -139,68 +135,16 @@ main #p2 {
   margin-top: 70px;
   padding-top: 30px;
   padding-bottom: 70px;
-  
 }
 
-.card{
-  background-color: #d71111;
-  margin: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex-wrap: wrap;
-  row-gap: 30px;
-  padding: 15px;
-  border-radius: 8px;
-  width: 150px;
-  height: 380px;
-  cursor: pointer;
-  transition: transform 0.3s ease; /* suaviza a transição */
-}
-.card:hover{
-  transform: translateY(-5px); /* move o botão 5px para cima */
-  
-}
-
-.card img{
-  width: 150px;
-  border-radius: 5px;
-}
-
-.card button{
-  margin: 7px;
-  width: 90px;
-  padding: 10px;
-  border-radius: 10px;
-  border: none;
-  
-}
-
-#rainbow{
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 0, 0, 0.600), /* Vermelho */
-    rgb(255, 127, 0, 0.600), /* Laranja */
-    rgba(255, 255, 0, 0.600), /* Amarelo */
-    rgba(0, 255, 0, 0.600), /* Verde */
-    rgba(0, 0, 255, 0.600), /* Azul */
-    rgba(76, 0, 130, 0.600) /* Índigo */
-  );
-}
-
-#rainbow p{
-  color:white;
-  font-weight: bold;
-}
-
-.flip-container {
+.flip-wrapper {
   width: 150px;
   height: 380px;
   perspective: 1000px;
   margin: 10px;
 }
 
-.flipper {
+.flip-inner {
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
@@ -208,12 +152,12 @@ main #p2 {
   transition: transform 0.6s;
 }
 
-.flip-container:hover .flipper {
+.flip-wrapper:hover .flip-inner {
   transform: rotateY(180deg);
   cursor: pointer;
 }
 
-.front{
+.flip-front, .flip-back {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -222,34 +166,23 @@ main #p2 {
   background-size: cover;
   background-position: center;
   display: flex;
+  justify-content: center;
+}
+
+.flip-front {
   align-items: flex-start;
-  justify-content: center;
 }
 
-
-.back {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  backface-visibility: hidden;
-  border-radius: 8px;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.back {
+.flip-back {
   transform: rotateY(180deg);
+  align-items: center;
   flex-direction: column;
 }
 
-.back-button {
+.flip-button {
   background-color: white;
   color: black;
   border: none;
-  text-decoration: none;
   border-radius: 10px;
   padding: 10px;
   width: 90px;
@@ -258,31 +191,21 @@ main #p2 {
   margin-bottom: 20px;
 }
 
-
-.titulo-card{
-  padding: 10px;
-  border-radius: 5px;
-  color: rgb(255, 255, 255);
-}
-
-
-.secao{
+.section-banner {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   margin-top: 80px;
   column-gap: 10px;
-  background-color: #022850a1;
+  background-color: #084B71;
   color: black;
   padding: 15px;
-  flex-wrap: wrap; /* ⬅️ ADICIONE ISSO */
-}
-.secao h1{
-  margin-left: 30px;
-  color: whitesmoke;
-  font-family: "Raleway", sans-serif;
+  flex-wrap: wrap;
 }
 
-.secao footer h1{
-  height: 100%;
+.section-banner h1 {
+  margin-left: 30px;
+  color: whitesmoke;
+  font-size: 2rem;
+  font-family: "Raleway", sans-serif;
 }
